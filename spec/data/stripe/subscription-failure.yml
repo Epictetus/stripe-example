@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request
     method: :post
     uri: https://x17X8jIPdQe0j60gSnsUfLQXRTUPVuit:@api.stripe.com:443/v1/customers
-    body: email=user_18%40example.com&plan=another-plan&card=
+    body: email=user_22%40example.com&plan=another-plan&card=
     headers:
       accept:
       - ! '*/*; q=0.5, application/xml'
@@ -12,9 +12,9 @@
       user-agent:
       - Stripe/v1 RubyBindings/1.6.0
       x-stripe-client-user-agent:
-      - ! '{"bindings_version":"1.6.0","lang":"ruby","lang_version":"1.9.3 p0 (2011-10-30)","platform":"x86_64-darwin11.2.0","publisher":"stripe","uname":"Darwin
-        Mars.local 11.2.0 Darwin Kernel Version 11.2.0: Tue Aug  9 20:54:00 PDT 2011;
-        root:xnu-1699.24.8~1/RELEASE_X86_64 x86_64"}'
+      - ! '{"bindings_version":"1.6.0","lang":"ruby","lang_version":"1.9.3 p125 (2012-02-16)","platform":"x86_64-darwin11.3.0","publisher":"stripe","uname":"Darwin
+        Mars.local 11.3.0 Darwin Kernel Version 11.3.0: Thu Jan 12 18:47:41 PST 2012;
+        root:xnu-1699.24.23~1/RELEASE_X86_64 x86_64"}'
       content-length:
       - '51'
       content-type:
@@ -27,7 +27,7 @@
       server:
       - nginx
       date:
-      - Wed, 15 Feb 2012 01:44:35 GMT
+      - Mon, 26 Mar 2012 17:42:18 GMT
       content-type:
       - application/json;charset=utf-8
       connection:

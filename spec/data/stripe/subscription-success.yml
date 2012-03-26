@@ -3,7 +3,7 @@
   request: !ruby/struct:VCR::Request
     method: :post
     uri: https://x17X8jIPdQe0j60gSnsUfLQXRTUPVuit:@api.stripe.com:443/v1/customers
-    body: card[number]=4242424242424242&card[cvc]=123&card[address_zip]=12312&card[exp_month]=5&card[exp_year]=2012&plan=another-plan
+    body: card[number]=4242424242424242&card[cvc]=123&card[address_zip]=12312&card[exp_month]=6&card[exp_year]=2012&plan=another-plan
     headers:
       accept:
       - ! '*/*; q=0.5, application/xml'
@@ -12,9 +12,9 @@
       user-agent:
       - Stripe/v1 RubyBindings/1.6.0
       x-stripe-client-user-agent:
-      - ! '{"bindings_version":"1.6.0","lang":"ruby","lang_version":"1.9.3 p0 (2011-10-30)","platform":"x86_64-darwin11.2.0","publisher":"stripe","uname":"Darwin
-        Mars.local 11.2.0 Darwin Kernel Version 11.2.0: Tue Aug  9 20:54:00 PDT 2011;
-        root:xnu-1699.24.8~1/RELEASE_X86_64 x86_64"}'
+      - ! '{"bindings_version":"1.6.0","lang":"ruby","lang_version":"1.9.3 p125 (2012-02-16)","platform":"x86_64-darwin11.3.0","publisher":"stripe","uname":"Darwin
+        Mars.local 11.3.0 Darwin Kernel Version 11.3.0: Thu Jan 12 18:47:41 PST 2012;
+        root:xnu-1699.24.23~1/RELEASE_X86_64 x86_64"}'
       content-length:
       - '123'
       content-type:
@@ -27,22 +27,23 @@
       server:
       - nginx
       date:
-      - Wed, 15 Feb 2012 01:44:40 GMT
+      - Mon, 26 Mar 2012 17:42:22 GMT
       content-type:
       - application/json;charset=utf-8
       connection:
       - keep-alive
       content-length:
-      - '861'
-    body: ! "{\n  \"account_balance\": 0,\n  \"created\": 1329270278,\n  \"id\": \"cus_3BvZ4Qs5ignAz4\",\n
+      - '900'
+    body: ! "{\n  \"account_balance\": 0,\n  \"created\": 1332783739,\n  \"id\": \"cus_JZyjWDI173k9Nh\",\n
       \ \"livemode\": false,\n  \"object\": \"customer\",\n  \"active_card\": {\n
       \   \"address_zip\": \"12312\",\n    \"address_zip_check\": \"pass\",\n    \"country\":
-      \"US\",\n    \"cvc_check\": \"pass\",\n    \"exp_month\": 5,\n    \"exp_year\":
-      2012,\n    \"last4\": \"4242\",\n    \"object\": \"card\",\n    \"type\": \"Visa\"\n
-      \ },\n  \"next_recurring_charge\": {\n    \"amount\": 1500,\n    \"date\": \"2012-03-15\"\n
-      \ },\n  \"subscription\": {\n    \"current_period_end\": 1331775879,\n    \"current_period_start\":
-      1329270279,\n    \"customer\": \"cus_3BvZ4Qs5ignAz4\",\n    \"object\": \"subscription\",\n
-      \   \"start\": 1329270279,\n    \"status\": \"active\",\n    \"plan\": {\n      \"amount\":
+      \"US\",\n    \"cvc_check\": \"pass\",\n    \"exp_month\": 6,\n    \"exp_year\":
+      2012,\n    \"fingerprint\": \"01ECvqdkX5ZQ4QtA\",\n    \"last4\": \"4242\",\n
+      \   \"object\": \"card\",\n    \"type\": \"Visa\"\n  },\n  \"next_recurring_charge\":
+      {\n    \"amount\": 1500,\n    \"date\": \"2012-04-26\"\n  },\n  \"subscription\":
+      {\n    \"current_period_end\": 1335462139,\n    \"current_period_start\": 1332783739,\n
+      \   \"customer\": \"cus_JZyjWDI173k9Nh\",\n    \"object\": \"subscription\",\n
+      \   \"start\": 1332783739,\n    \"status\": \"active\",\n    \"plan\": {\n      \"amount\":
       1500,\n      \"currency\": \"usd\",\n      \"id\": \"another-plan\",\n      \"interval\":
       \"month\",\n      \"livemode\": false,\n      \"name\": \"another plan\",\n
       \     \"object\": \"plan\"\n    }\n  }\n}\n"
