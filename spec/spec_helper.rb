@@ -32,10 +32,10 @@ RSpec.configure do |config|
 
 end
 
-VCR.config do |config|
+VCR.configure do |config|
   config.cassette_library_dir     = 'spec/data'
   config.default_cassette_options = { :record => :new_episodes }
   config.ignore_localhost         = true
 
-  config.stub_with :webmock
+  config.hook_into :webmock
 end

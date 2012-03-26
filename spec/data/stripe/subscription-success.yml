@@ -1,50 +1,83 @@
 ---
-- !ruby/struct:VCR::HTTPInteraction
-  request: !ruby/struct:VCR::Request
-    method: :post
-    uri: https://x17X8jIPdQe0j60gSnsUfLQXRTUPVuit:@api.stripe.com:443/v1/customers
-    body: card[number]=4242424242424242&card[cvc]=123&card[address_zip]=12312&card[exp_month]=6&card[exp_year]=2012&plan=another-plan
+http_interactions:
+- request:
+    method: post
+    uri: https://x17X8jIPdQe0j60gSnsUfLQXRTUPVuit:@api.stripe.com/v1/customers
+    body:
+      encoding: US-ASCII
+      string: card[number]=4242424242424242&card[cvc]=123&card[address_zip]=12312&card[exp_month]=6&card[exp_year]=2012&plan=another-plan
     headers:
-      accept:
-      - ! '*/*; q=0.5, application/xml'
-      accept-encoding:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
       - gzip, deflate
-      user-agent:
+      User-Agent:
       - Stripe/v1 RubyBindings/1.6.0
-      x-stripe-client-user-agent:
-      - ! '{"bindings_version":"1.6.0","lang":"ruby","lang_version":"1.9.3 p125 (2012-02-16)","platform":"x86_64-darwin11.3.0","publisher":"stripe","uname":"Darwin
-        Mars.local 11.3.0 Darwin Kernel Version 11.3.0: Thu Jan 12 18:47:41 PST 2012;
-        root:xnu-1699.24.23~1/RELEASE_X86_64 x86_64"}'
-      content-length:
-      - '123'
-      content-type:
+      X-Stripe-Client-User-Agent:
+      - "{\"bindings_version\":\"1.6.0\",\"lang\":\"ruby\",\"lang_version\":\"1.9.3 p125 (2012-02-16)\",\"platform\":\"x86_64-darwin11.3.0\",\"publisher\":\"stripe\",\"uname\":\"Darwin Mars.local 11.3.0 Darwin Kernel Version 11.3.0: Thu Jan 12 18:47:41 PST 2012; root:xnu-1699.24.23~1/RELEASE_X86_64 x86_64\"}"
+      Content-Length:
+      - "123"
+      Content-Type:
       - application/x-www-form-urlencoded
-  response: !ruby/struct:VCR::Response
-    status: !ruby/struct:VCR::ResponseStatus
+  response:
+    status:
       code: 200
-      message: ! '...'
+      message: ...
     headers:
-      server:
+      Server:
       - nginx
-      date:
-      - Mon, 26 Mar 2012 17:42:22 GMT
-      content-type:
+      Date:
+      - Mon, 26 Mar 2012 18:00:42 GMT
+      Content-Type:
       - application/json;charset=utf-8
-      connection:
+      Connection:
       - keep-alive
-      content-length:
-      - '900'
-    body: ! "{\n  \"account_balance\": 0,\n  \"created\": 1332783739,\n  \"id\": \"cus_JZyjWDI173k9Nh\",\n
-      \ \"livemode\": false,\n  \"object\": \"customer\",\n  \"active_card\": {\n
-      \   \"address_zip\": \"12312\",\n    \"address_zip_check\": \"pass\",\n    \"country\":
-      \"US\",\n    \"cvc_check\": \"pass\",\n    \"exp_month\": 6,\n    \"exp_year\":
-      2012,\n    \"fingerprint\": \"01ECvqdkX5ZQ4QtA\",\n    \"last4\": \"4242\",\n
-      \   \"object\": \"card\",\n    \"type\": \"Visa\"\n  },\n  \"next_recurring_charge\":
-      {\n    \"amount\": 1500,\n    \"date\": \"2012-04-26\"\n  },\n  \"subscription\":
-      {\n    \"current_period_end\": 1335462139,\n    \"current_period_start\": 1332783739,\n
-      \   \"customer\": \"cus_JZyjWDI173k9Nh\",\n    \"object\": \"subscription\",\n
-      \   \"start\": 1332783739,\n    \"status\": \"active\",\n    \"plan\": {\n      \"amount\":
-      1500,\n      \"currency\": \"usd\",\n      \"id\": \"another-plan\",\n      \"interval\":
-      \"month\",\n      \"livemode\": false,\n      \"name\": \"another plan\",\n
-      \     \"object\": \"plan\"\n    }\n  }\n}\n"
-    http_version: '1.1'
+      Content-Length:
+      - "900"
+    body:
+      encoding: US-ASCII
+      string: |
+        {
+          "account_balance": 0,
+          "created": 1332784840,
+          "id": "cus_lFYYNy9zzmEOol",
+          "livemode": false,
+          "object": "customer",
+          "active_card": {
+            "address_zip": "12312",
+            "address_zip_check": "pass",
+            "country": "US",
+            "cvc_check": "pass",
+            "exp_month": 6,
+            "exp_year": 2012,
+            "fingerprint": "01ECvqdkX5ZQ4QtA",
+            "last4": "4242",
+            "object": "card",
+            "type": "Visa"
+          },
+          "next_recurring_charge": {
+            "amount": 1500,
+            "date": "2012-04-26"
+          },
+          "subscription": {
+            "current_period_end": 1335463241,
+            "current_period_start": 1332784841,
+            "customer": "cus_lFYYNy9zzmEOol",
+            "object": "subscription",
+            "start": 1332784841,
+            "status": "active",
+            "plan": {
+              "amount": 1500,
+              "currency": "usd",
+              "id": "another-plan",
+              "interval": "month",
+              "livemode": false,
+              "name": "another plan",
+              "object": "plan"
+            }
+          }
+        }
+
+    http_version:
+  recorded_at: Mon, 26 Mar 2012 18:00:42 GMT
+recorded_with: VCR 2.0.0
